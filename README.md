@@ -37,6 +37,7 @@ This project provides a Terraform configuration for deploying a bastion host and
   ```bash
   git clone <repository_url>
   cd terraform
+  ```
 
 ## Set up a `terraform.tfvars` file to define the necessary input variables:
 
@@ -44,6 +45,7 @@ This project provides a Terraform configuration for deploying a bastion host and
 compartment_id = "your_compartment_ocid"
 availability_domain = "your_availability_domain"
 oracle_linux_image_id = "your_image_ocid"
+```
 
 ## 2. Access the Bastion Host
 
@@ -71,6 +73,7 @@ kubectl create secret generic postgresql-tls \
   --from-file=oke/PostgreSQL/certs/postgresql.crt \
   --from-file=oke/PostgreSQL/certs/postgresql.key
 helm install my-postgres bitnami/postgresql -f oke/PostgreSQL/values.yaml
+```
 
 
 ## 3. Deploy phpPgAdmin
@@ -80,6 +83,7 @@ helm install my-postgres bitnami/postgresql -f oke/PostgreSQL/values.yaml
 ```bash
 kubectl apply -f oke/phpPgAdmin/deployment.yaml
 kubectl apply -f oke/phpPgAdmin/service.yaml
+```
 
 ## 4. Access phpPgAdmin
 
@@ -89,6 +93,7 @@ From the bastion host, forward a local port to access phpPgAdmin internally:
 
 ```bash
 kubectl port-forward svc/phppgadmin-service 8080:80
+```
 
 
 
