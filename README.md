@@ -21,6 +21,16 @@ This project provides a Terraform configuration for deploying a bastion host and
 │   │   ├── service.yaml           # 
 └── README.md                      # 
 ```
+
+## Infrastructure Setup
+
+The infrastructure includes:
+- A **bastion host** running Ubuntu, pre-configured with:
+  - **OCI CLI**: To interact with OCI resources.
+  - **kubectl**: To manage and interact with the OKE cluster.
+  - **helm**: For deploying and managing Kubernetes applications.
+- An **OKE cluster** for deploying PostgreSQL and `phpPgAdmin`.
+
 ## Prerequisites
 - [Oracle Cloud Infrastructure CLI (OCI CLI)](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm) installed and configured on your local machine.
 - An OCI account with necessary permissions for managing compute, networking, and Kubernetes resources.
