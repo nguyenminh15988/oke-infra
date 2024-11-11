@@ -20,7 +20,7 @@ This project provides a Terraform configuration for deploying a bastion host and
 │   │   ├── deployments.yaml       # 
 │   │   ├── service.yaml           # 
 └── README.md                      # 
-
+```
 ## Prerequisites
 - [Oracle Cloud Infrastructure CLI (OCI CLI)](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm) installed and configured on your local machine.
 - An OCI account with necessary permissions for managing compute, networking, and Kubernetes resources.
