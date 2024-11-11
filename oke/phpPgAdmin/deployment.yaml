@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: phppgadmin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: phppgadmin
+  template:
+    metadata:
+      labels:
+        app: phppgadmin
+    spec:
+      containers:
+      - name: phppgadmin
+        image: dockage/phppgadmin
+        ports:
+        - containerPort: 80
+        env:
+        - name: PHPPGADMIN_SERVER
+          value: "my-postgres-postgresql.default.svc.cluster.local"
