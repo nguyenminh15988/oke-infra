@@ -19,3 +19,6 @@ replica:
 
 tls:
   enabled: true
+  certFilename: "postgresql.crt"
+  certKeyFilename: "postgresql.key"
+  certificatesSecret: "postgresql-tls"  
